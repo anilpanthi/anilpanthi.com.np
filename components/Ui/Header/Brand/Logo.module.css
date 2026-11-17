@@ -1,0 +1,22 @@
+.logoWrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logoLight {
+  display: block;
+}
+
+.logoDark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logoLight {
+    display: none;
+  }
+
+  .logoDark {
+    display: block;
+  }
+}

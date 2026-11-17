@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Poppins, Manrope } from "next/font/google";
 import "./globals.css";
 
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const manrope = Manrope({
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: light)", color: "#9f0a0aff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
   width: "device-width",
@@ -85,7 +86,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/FaviconLIght.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/FaviconDark.svg",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
   },
 };
 
